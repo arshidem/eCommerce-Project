@@ -145,7 +145,7 @@ const Checkout = () => {
   
       // Step 2: Open Razorpay payment UI
       const options = {
-        key: "rzp_test_0LSsHi6WJCgCN3",
+        key: "your RAZORPAY_ID_KEY",
         amount: order.amount,
         currency: order.currency,
         name: "Shopzy",
