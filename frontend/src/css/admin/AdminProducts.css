@@ -1,0 +1,283 @@
+/* General Styles */
+.admin-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Sidebar */
+  .admin-sidebar {
+    position: fixed;
+    top: 10px;
+    left: 310px;
+    width: 80px;
+    height: calc(100vh - 80px);
+    background-color: #eaecc6;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-y: auto;
+  }
+  
+  .admin-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .admin-sidebar button {
+    font-size: .7rem;
+    background: #4b2c35;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: left;
+  }
+  .sidebar-toggle{
+background-color: transparent; 
+border: none;
+ }
+  .admin-sidebar button:hover,
+  .admin-sidebar button.active {
+    background: #495057;
+  }
+  
+  /* Main Content */
+  .admin-content {
+    flex: 1;
+    margin-left: 55px;
+    position: relative;
+    bottom: 25px;
+    padding: 20px;
+    background-color: #eaecc6;
+    border-radius: 8px;
+    overflow-y: auto;
+  }
+  
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .btn-add {
+    background-color: #4b2c35;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-add:hover {
+    background-color: #495057;
+  }
+  
+  /* Product List */
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 97%;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: left;
+    transition: box-shadow 0.3s;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;    width: 90%;
+    justify-content: space-between;
+  }
+  
+  .product-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+  }
+  .admin-product-name{
+    font-size: 15px;
+  }
+  .admin-product-price{
+    font-size: 14px;
+  }
+  .admin-product-stock{
+    font-size: 14px;
+
+  }
+  .admin-first{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+align-items: center; 
+/* background-color: red; */
+}
+
+  .admin-second{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 20px;
+    /* background-color: green; */
+
+  }
+ 
+  .actions {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    /* background-color: blue; */
+
+  }
+  /* Product Details */
+  .product-info {
+    flex-grow: 1;
+  }
+  
+  /* Product Actions */
+  
+  
+  .btn-edit,
+  .btn-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .btn-edit:hover {
+    color: #2980b9;
+  }
+  
+  .btn-delete:hover {
+    color: red;
+  }
+  
+  /* Responsive Design */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .admin-sidebar {
+      width: 150px;
+      left: 303px;
+      width: 70px;
+    }
+    .admin-content {
+      margin-left: 40px;
+      bottom: 29px;
+    }
+  }
+  
+
+
+  @media only screen and (min-width: 411px) and (max-width: 768px) {
+    .admin-sidebar {
+      width: 150px;
+      left: 103px;
+      width: 70px;
+    }
+    .admin-content {
+      margin-left: 45px;
+      bottom: 17px;
+    }
+    .btn-add {
+     padding: 6px 10px;
+      font-size: .5rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .admin-header{
+      width: 100%;
+    }
+    .admin-header h2{
+   font-size: 14px;
+    }
+   
+   
+   
+    .admin-sidebar {
+        width: 150px;
+        left: 103px;
+        width: 70px;
+      }
+      .admin-content {
+        margin-left: 45px;
+        bottom: 17px;
+      }
+     
+
+}
+@media only screen and (max-width: 410px) {
+    
+    .admin-content {
+        margin-left: -3px;
+        top: -10px;
+
+      }
+    .admin-sidebar ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+      
+    }
+      .admin-sidebar ul li button{
+     font-size: 8px;
+
+      }
+
+      .btn-add {
+        padding: 6px 10px;
+         font-size: .5rem;
+         cursor: pointer;
+         transition: background-color 0.3s;
+       }
+       .admin-header h2{
+        font-size: 14px;
+         }
+      .admin-layout {
+    flex-direction: column; 
+    gap: 25px; 
+align-items: center; 
+}
+    .admin-sidebar {
+        width: 61%;
+        height: auto;
+        overflow-y: scroll; 
+        scrollbar-width: thin;
+        z-index: 10;
+        position: fixed;
+        top: 7px;
+        left: 105px;
+        background-color: #eaecc6;
+        border-radius: 8px;
+      }
+}
+
+
+  

@@ -1,0 +1,160 @@
+/* Reset Password - Send OTP Page */
+.send-reset-otp-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .send-reset-otp-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/path-to-your-leaves-image.jpg') center/cover no-repeat;
+    opacity: 0.1;
+    z-index: 0;
+  }
+  
+  .send-reset-otp-title {
+    font-size: 2.5rem;
+    color: black;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .send-reset-otp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .send-reset-otp-input {
+    width: 94%;
+    padding: 12px;
+    font-size: 1.125rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.75rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .send-reset-otp-input:focus {
+    border-color: #4b2c35;
+  }
+  
+  .send-reset-otp-btn {
+    width: 100%;
+    padding: 13px;
+    font-size: 1.125rem;
+    color: white;
+    background: #4b2c35;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .send-reset-otp-btn:hover {
+    background: #9e9e7b;
+    color: black;
+  }
+  
+  .send-reset-otp-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Styles */
+  @media only screen and (max-width: 480px) {
+    .send-reset-otp-container {
+      width: 60%;
+      padding: 30px;
+    }
+    
+    .send-reset-otp-title {
+      font-size: 1.5rem;
+    }
+    
+    .send-reset-otp-form {
+      gap: 1rem;
+    }
+  
+    .send-reset-otp-input {
+      font-size: 1rem;
+      padding: 10px;
+      width: 90%;
+    }
+  
+    .send-reset-otp-btn {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .send-reset-otp-container {
+      width: 80%;
+      padding: 35px;
+    }
+  
+    .send-reset-otp-title {
+      font-size: 2rem;
+    }
+  
+    .send-reset-otp-form {
+      gap: 1.2rem;
+    }
+  
+    .send-reset-otp-input {
+      font-size: 1.125rem;
+      padding: 12px;
+    }
+  
+    .send-reset-otp-btn {
+      font-size: 1.125rem;
+      padding: 12px;
+    }
+  }
+  
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .send-reset-otp-container {
+      width: 60%;
+      padding: 40px;
+    }
+  
+    .send-reset-otp-title {
+      font-size: 2.5rem;
+    }
+  
+    .send-reset-otp-form {
+      gap: 1.5rem;
+    }
+  
+    .send-reset-otp-input {
+      font-size: 1.125rem;
+      padding: 15px;
+    }
+  
+    .send-reset-otp-btn {
+      font-size: 1.125rem;
+      padding: 15px;
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    .send-reset-otp-container {
+      max-width: 450px;
+      padding: 50px;
+    }
+  }
+  

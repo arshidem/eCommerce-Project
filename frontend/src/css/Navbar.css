@@ -1,0 +1,291 @@
+/* Navbar container */
+.navbar {
+  background-color: black;
+  display: flex;
+  position: sticky;
+  z-index: 1000;
+  top: 10px;
+  border-radius: 10px;
+  justify-content: space-between; /* Distributes items */
+  align-items: center; /* Centers vertically */
+  height: 60px; /* Adjusted based on padding */
+}
+
+.first{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 10%;
+
+}
+.second{
+  width: 70%;
+
+}
+.third{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 25%;
+
+}
+
+/* Logo */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  position: relative;
+  width: 120px;
+
+}
+
+/* Search bar */
+
+
+/* Cart link */
+.cart-link {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+
+.imgCart{
+  width: 30px;
+  filter: invert();
+  
+}
+
+
+/* Cart count badge */
+.cart-count {
+  background-color: #040404;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 4px;
+  right: -13px;
+}
+
+/* User name section */
+.user-name {
+  font-size: .9rem;
+  font-weight: 600;
+  color:black;
+  background-color: white;
+  padding: 9px 12px;
+  margin: 10px;
+  margin-left: 20px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.user-name:hover {
+  background-color: black;
+  color: white;
+}
+
+.signin-btn{
+  border-radius: 5px;
+  color: white;
+/* background-color: white; */
+padding: 3px 8px;
+font-size: small;
+margin: 10px;
+transition: background-color 0.3s;
+
+}
+.signin-btn:hover{
+  background-color: #79726c;
+}
+
+
+.signin-li{
+  text-decoration: none;
+
+}
+
+
+@media only screen and (max-width: 480px) {
+.logo{
+  width: 65px;
+  margin-left: 7px;
+}
+.first{
+  width: 30%;
+}
+.second{
+  width: 70%;
+}
+.third{
+  width: 30%;
+}
+.imgCart{
+  width: 25px;
+}
+.user-name {
+  font-size: .8rem;
+  font-weight: 500;
+  padding: 5px 8px;
+
+}
+.signin-btn{
+ 
+    padding: 6px 10px;
+    font-size: .45rem;
+  width: 26px;
+  text-align: center;
+  
+
+}
+
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+  .navbar {
+    padding: 10px;
+}
+.first{
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.second{
+  /* width: 60%; */
+  display: flex;
+  align-items: center;
+}
+
+.signin-btn{
+  padding: 8px 12px;
+  font-size: .6rem;
+width: 34px;
+text-align: center;
+}
+}
+
+@media only screen and (min-width:768px)and (max-width:1200px){
+  .navbar{
+    height: 65px;
+  }
+
+  .first{
+    width: 15%;
+  }
+  .logo{
+    margin-left: 10px;
+  }
+  .second{
+    justify-content: center;
+    
+    width: 60%;
+    }
+    .third{
+      gap: 10px;
+    }
+
+    .imgCart{
+      width: 30px;
+    }
+    .user-name {
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 6px 11px;
+    
+    }
+    .signin-btn{
+      padding: 8px 12px;
+      font-size: 1rem;
+    width: 54px;
+    text-align: center;
+    }
+}
+@media only screen and (min-width: 1200px)and (max-width: 1399px)  {
+  .navbar{
+    height: 65px;
+  }
+  .logo{
+    margin-left: 50px;
+  }
+  .second{
+    width: 80%;
+    }
+    .third{
+      gap: 10px;
+    }
+
+    .imgCart{
+      width: 30px;
+    }
+    .user-name {
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding: 5px 10px;
+    
+    }
+    .signin-btn{
+      padding: 8px 12px;
+      font-size: 1rem;
+    width: 54px;
+    text-align: center;
+    }
+}
+
+@media (min-width: 1400px) {
+  .navbar{
+    height: 65px;
+  }
+  .logo{
+    width: 140px;
+  }
+  .logo{
+    margin-left: 50px;
+  }
+  .second{
+    width: 80%;
+    }
+    .third{
+      gap: 30px;
+    }
+
+    .imgCart{
+      width: 35px;
+    }
+    .cart-count {
+      font-size: .8rem;
+      padding: 2px;
+    }
+    .user-name {
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 6px 11px;
+    
+    }
+    .signin-btn{
+      padding: 8px 12px;
+      font-size: 1rem;
+    width: 54px;
+    text-align: center;
+    }
+}
+
+
+
+
+

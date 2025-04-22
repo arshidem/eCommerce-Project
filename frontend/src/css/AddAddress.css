@@ -1,0 +1,79 @@
+.add-address-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.add-address-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 25px;
+    font-family: 'Georgia', serif;
+}
+
+.add-address-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    flex: 1;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+input:focus {
+    border-color: #555;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-top: 15px;
+    cursor: pointer;
+    color: #555;
+    font-family: 'Arial', sans-serif;
+}
+
+.save-btn {
+    background: black;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.5px;
+}
+
+.save-btn:hover {
+    background: #45a049;
+}

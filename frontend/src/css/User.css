@@ -1,0 +1,74 @@
+/* Sidebar Container */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -280px; /* Initially off-screen */
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .userName{
+    color: white;
+  }
+  /* Open State */
+  .sidebar.open {
+    right: 0; /* Slide to visible position */
+    background-color: black;
+
+   
+  }
+  
+  /* Close Button */
+  .close-btn {
+    align-self: flex-end;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Sidebar Links */
+  .profile-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .profile-link {
+    text-decoration: none;
+    padding: 12px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .profile-link:hover {
+    background-color: rgb(133, 124, 124);
+  }
+
+  /* Logout Button */
+  .logout-btn {
+    margin-top: auto;
+    padding: 10px;
+    width: 100%;
+    background: #ff4d4d;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background: #cc0000;
+  }
+  

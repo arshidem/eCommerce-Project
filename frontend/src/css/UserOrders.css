@@ -1,0 +1,91 @@
+.orders-container {
+width: 100%;   
+  }
+  .orders-title{
+    font-size: 30px;
+  }
+  .order-card {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .order-toggle {
+    display: none;
+  }
+
+  
+  .order-summary {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .order-items-preview{
+    display: flex;
+    justify-content: space-between;
+  }
+  .order-items-preview img {
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+  }
+  
+  .order-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .order-toggle:checked ~ .order-details {
+    max-height: 500px;
+  }
+  .order-delivery-status {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .order-delivery-status.pending {
+    color: red;
+  }
+  
+  .order-delivery-status.shipped {
+    color: blue;
+  }
+  
+  .order-delivery-status.delivered {
+    color: green;
+  }
+  
+
+  @media only screen and (max-width: 480px) {
+
+    .orders-title{
+      font-size: 20px;
+    }
+    .order-items-preview img {
+      width: 50px;
+      height: 50px;
+      margin-right: 5px;
+    }
+  }
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .orders-title{
+      font-size: 20px;
+    }
+    .order-items-preview img {
+      width: 80px;
+      height: 80px;
+      margin-right: 5px;
+    }
+  }
+
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+  }
+
+  @media only screen and (min-width: 1025px) {
+  }
+

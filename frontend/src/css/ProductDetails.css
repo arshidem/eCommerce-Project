@@ -1,0 +1,643 @@
+/* Container for the entire product details page */
+
+
+/* Styling the Navbar component */
+
+
+/* Main product details section */
+
+.product-info{
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  gap: 10px;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+
+/* Product Image */
+
+.firstf{
+  width: 45%;
+
+}
+.slick-slider .slick-slide img {
+  border-radius: 8px;
+}
+.seconds{
+  background-color:white;
+  padding: 5px;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+ 
+}
+.s1{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.s2{
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: 20px;
+  align-items: start;
+  margin-top: 40px;
+  margin-bottom: -10px;
+
+/* background-color: red; */
+}
+
+/* Product Name */
+.pdct-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0px;
+}
+
+/* Product Description */
+.product-description {
+  font-size: 1.1rem;
+  color: black;
+}
+
+/* Product Price */
+.pdct-price{
+  font-weight: 900;
+font-size: 10px;
+}
+
+
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 16px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.add-to-cart-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Add to Cart Button loading state */
+.add-to-cart-btn.loading {
+  background-color: #f39c12;
+}
+
+.add-to-cart-btn.added {
+  background-color: #2ecc71;
+}
+
+.add-to-cart-btn.added:hover {
+  background-color: #27ae60;
+}
+
+/* Loading/Error Text */
+
+
+.product-details p.error {
+  color: red;
+}
+
+/* .product-details .product-image-placeholder {
+  width: 100%;
+  max-width: 400px;
+  height: 800px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+} */
+
+/* Toast Container for success/error messages */
+.ToastContainer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+.back-btn{
+  background-color: black;
+  transition: all .0s;
+}
+
+.back-btn:hover{
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+
+
+.slick-slider .slick-slide img {
+  width: 500px;  /* Set image width to 400px in the carousel */
+  object-fit: contain;  /* Ensure image aspect ratio is maintained */
+  height: 500px;
+
+}
+
+
+/* Add custom styles to the carousel container if needed */
+.slick-slider {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.slick-prev, .slick-next {
+  z-index: 0;
+}
+
+.reviews-section h2{
+  
+  color: black;
+}
+/* .reviews-section{
+
+  
+} */
+/* Review Slider Container */
+.review-slider {
+  margin-top: 30px;
+  width: 100%;
+  /* background-color: red; */
+ 
+}
+
+/* Style for each review card in the slider */
+.review-card {
+  margin: auto;
+  position: relative;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Review Name */
+.review-card h4 {
+  
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin: 10px;
+}
+
+/* Review Text */
+.review-card p {
+  font-size: 1.1rem;
+  margin: 10px;
+
+  color: #555;
+  line-height: 1.5;
+  padding-bottom: 10px;
+
+}
+
+/* Style for the review slider controls */
+
+/* Review Slider Navigation Arrows */
+.slick-prev {
+  left: -30px;
+  display: none !important;
+}
+
+.slick-next {
+  right: -30px;
+  display: none !important;
+
+}
+
+/* Review Slider Dots */
+.slick-dots {
+  bottom: -25px;
+  text-align: center;
+}
+
+.slick-dots li button {
+  border-radius: 50%;
+
+}
+
+/* .slick-dots li.slick-active button {
+  background-color: black;
+} */
+/* Review Form Styles */
+.review-form {
+  margin-top: 30px;
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-form h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  color: #555;
+  display: block;
+}
+
+.input-field {
+  width: 98.5%;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  color: #333;
+}
+
+.input-field:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.submit-review-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-review-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.submit-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Submit Button Loading State */
+.submit-btn:disabled {
+  background-color: #f39c12;
+  color: white;
+}
+
+/* Responsive Adjustments */
+
+
+@media only screen and (max-width: 480px) {
+  .firstf{
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .seconds{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+  
+  }
+  .s1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .s2{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: -8px;
+  
+  /* background-color: red; */
+  }
+  
+  /* Product Name */
+  .pdct-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0px;
+  }
+  
+  /* Product Description */
+  .product-description {
+    font-size: .8rem;
+    color: black;
+  }
+  
+  /* Product Price */
+  .pdct-price{
+    font-weight: bold;
+    font-size: 20px !important;
+  }
+  
+  
+    .slick-slider .slick-slide img {
+      width: 400px;  /* Set image width to 400px in the carousel */
+      object-fit: contain;
+      height: 350px;
+    margin: auto;
+    }
+    
+    /* Add custom styles to the carousel container if needed */
+    .slick-slider {
+      width: 100%;
+    
+    }
+  
+  
+    /* Stack product info vertically on small screens */
+    .product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    }
+  
+  
+    .product-image {
+      width: 100%;
+      max-width: 350px;
+    }
+  
+    .product-name {
+      font-size: 1.8rem;
+    }
+  
+    /* .product-description {
+  
+    } */
+  
+  
+  
+    .add-to-cart-btn {
+      font-size: .7rem;
+      padding: 10px 20px;
+      margin-top: -10px;
+    }
+  
+  
+  
+    
+    .review-form {
+      padding: 15px;
+      max-width: 67%;
+    }
+  
+    .input-field {
+      font-size: 0.9rem;
+    }
+  
+    .submit-btn {
+      font-size: 1rem;
+      padding: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+
+  .firstf{
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .seconds{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+  
+  }
+  .s1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .s2{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: -8px;
+  
+  /* background-color: red; */
+  }
+  
+  /* Product Name */
+  .pdct-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0px;
+  }
+  
+  /* Product Description */
+  .product-description {
+    font-size: 1.1rem;
+    color: black;
+  }
+  
+  /* Product Price */
+  .pdct-price{
+    font-weight: bold;
+    font-size: 20px !important;  
+  }
+  
+  
+    .slick-slider .slick-slide img {
+      width: 400px;  /* Set image width to 400px in the carousel */
+      object-fit: contain;
+      height: 350px;
+    margin: auto;
+    }
+    
+    /* Add custom styles to the carousel container if needed */
+    .slick-slider {
+      width: 100%;
+    
+    }
+  
+  
+    /* Stack product info vertically on small screens */
+    .product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    }
+  
+  
+    .product-image {
+      width: 100%;
+      max-width: 350px;
+    }
+  
+    .pdct-name {
+      font-size: 1.8rem;
+    }
+  
+    /* .product-description {
+  
+    } */
+  
+    .pdct-price {
+      font-weight: bold;
+      font-size: 25px !important;    }
+  
+    .add-to-cart-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+      margin-top: -15px;
+    }
+  
+  
+  
+    
+    .review-form {
+      padding: 15px;
+      max-width: 67%;
+    }
+  
+    .input-field {
+      font-size: 0.9rem;
+    }
+  
+    .submit-btn {
+      font-size: 1rem;
+      padding: 10px;
+    }
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Make product info section more compact on tablets */
+  .product-info {
+    display: flex;
+  }
+  .slick-slider .slick-slide img {
+    width: 349px;  /* Set image width to 400px in the carousel */
+    object-fit: contain;  /* Ensure image aspect ratio is maintained */
+    height: 350px;
+  
+  }
+  
+  /* Add custom styles to the carousel container if needed */
+  .slick-slider {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .review-slider{
+    margin: auto;
+    max-width: 500px;
+  }
+
+
+
+  .product-image {
+    width: 500px;
+    max-width: 500px;
+  }
+
+ 
+
+
+  .pdct-price {
+    font-weight: bold;
+    font-size: 28px !important;  }
+
+  .add-to-cart-btn {
+    font-size: 1rem;
+    padding: 11px 32px;
+  }
+
+  
+}
+
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  /* Adjust layout for laptop screens */
+  .product-info {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .slick-slider .slick-slide img {
+    width: 400px;  /* Set image width to 400px in the carousel */
+    object-fit: contain;  /* Ensure image aspect ratio is maintained */
+    height: 400px;
+  
+  }
+  
+  /* Add custom styles to the carousel container if needed */
+  .slick-slider {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+ 
+
+ 
+  .product-image {
+    width: 400px;
+    max-width: 400px;
+  }
+
+  .pdct-name {
+    font-size: 2.5rem;
+  }
+
+  .product-description {
+    font-size: 1.2rem;
+  }
+
+  .pdct-price {
+    font-size: 1.3rem;
+  }
+
+  .add-to-cart-btn {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+  }
+}
