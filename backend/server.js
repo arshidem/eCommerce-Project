@@ -64,22 +64,23 @@ const allowedOrigins = [
   "https://e-commerce-project-flax.vercel.app"
 ];
 
-const allowedOrigins = [
+let allowedOrigins = [
   "https://e-commerce-project-flax.vercel.app",
   "https://e-commerce-project-qmog.vercel.app"
 ];
 
+// Later in your code, just reuse it:
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl)
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
     }
   },
-  credentials: true,
+  credentials: true, // Needed to allow cookies
 }));
+
 
 
 app.use(cookieParser());
