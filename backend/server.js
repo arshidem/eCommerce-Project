@@ -51,7 +51,7 @@ const allowedOrigin=['http://localhost:5173']
 app.use(express.json({ limit: "5mb" })); 
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin:allowedOrigin,
+    origin:"https://e-commerce-project-flax.vercel.app",
     credentials: true,
 }));
 app.use(cookieParser());
