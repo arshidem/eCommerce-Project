@@ -46,7 +46,6 @@ const orderRouter=require('./routes/orderRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
 
 
-const allowedOrigin=['http://localhost:5173']
 // Middlewares
 app.use(express.json({ limit: "5mb" })); 
 app.use(express.urlencoded({ extended: true }));
