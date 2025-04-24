@@ -59,10 +59,22 @@ const offerRoute = require('./routes/offer');
 // Middlewares
 app.use(express.json({ limit: "5mb" })); 
 app.use(express.urlencoded({ extended: true }));
+const allowedOrigins = [
+  "https://e-commerce-project-qmog.vercel.app",
+  "https://e-commerce-project-flax.vercel.app"
+];
+
 app.use(cors({
-    origin:"https://e-commerce-project-flax.vercel.app",
-    credentials: true,
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
 }));
+
 app.use(cookieParser());
 // app.use((req, res, next) => {
 //     console.log(`Incoming Request: ${req.method} ${req.url}`);
