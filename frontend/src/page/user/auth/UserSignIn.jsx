@@ -24,7 +24,7 @@ const UserSignIn = () => {
                 return toast.error("Both email and password are required");
             }
     
-            const { data } = await axios.post(`${backendUrl}/api/auth/signin`, { email, password });
+            const { data } = await axios.post(`${backendUrl}/api/auth/signin`, { email, password },{ withCredentials: true });
     
             if (data.success) {
                 setLoggedin(true);
