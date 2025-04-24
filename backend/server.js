@@ -53,6 +53,7 @@ const paymentRouter = require('./routes/paymentRoutes');
 
 const orderRouter=require('./routes/orderRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
+const offerRoute = require('./routes/offer');
 
 
 // Middlewares
@@ -79,6 +80,7 @@ app.use('/api', addressRouter);
 app.use('/api',paymentRouter)
 app.use('/api',orderRouter)
 app.use('/reviews',reviewRouter)
+app.use('/api', offerRoute);
 
 
 
