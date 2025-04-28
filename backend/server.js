@@ -19,15 +19,7 @@ app.use(session({
     cookie: { secure: process.env.NODE_ENV === "production", maxAge: 10 * 60 * 1000 } // 10 min
 }));
 
-// Proxy route
-app.get('/api/offer', async (req, res) => {
-    try {
-      const response = await axios.get('https://overbridgenet.com/jsv8/offer');
-      res.json(response.data);
-    } catch (error) {
-      res.status(500).json({ error: 'Failed to fetch offer data' });
-    }
-  });
+
   
 // Database Connection
 connectDB()
