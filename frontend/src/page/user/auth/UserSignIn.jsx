@@ -46,10 +46,7 @@ const UserSignIn = () => {
     return (
         <div className="whole-container">
             <div className="image-container">
-                <img className="img1" src={electronics} alt="electronics" />
-                <img className="img2" src={cosmetics} alt="cosmetics" />
                 <img className="img3" src={fashion} alt="fashion" />
-                <img className="img4" src={toy} alt="toy" />
             </div>
 
             <div className="signin-container">

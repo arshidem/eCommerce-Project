@@ -21,21 +21,12 @@
   aspect-ratio: 2/4;
   object-fit: cover;
   opacity: 0;
-  animation: fadeImages 16s infinite;
   top: 0;
   left: 0;
   border-radius: 1rem;
 }
 
-@keyframes fadeImages {
-  0%, 25%, 50%, 75%, 100% { opacity: 0; }
-  20%, 70% { opacity: 1; }
-}
 
-.img1 { animation-delay: 0s; }
-.img2 { animation-delay: 4s; }
-.img3 { animation-delay: 8s; }
-.img4 { animation-delay: 12s; }
 
 .register-container {
   width: 50%;
