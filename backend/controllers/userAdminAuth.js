@@ -179,11 +179,11 @@ const verifyEmail = async (req, res) => {
         });
 
         // ✅ Destroy session after successful verification
-        req.session.destroy((err) => {
-            if (err) {
-                console.error("Error clearing session:", err);
-            }
-        });
+        // req.session.destroy((err) => {
+        //     if (err) {
+        //         console.error("Error clearing session:", err);
+        //     }
+        // });
 
         // ✅ Send welcome email after successful verification
         const mailOptions = {
