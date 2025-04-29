@@ -43,7 +43,9 @@ app.use(express.urlencoded({ extended: true }));
 
 const allowedOrigins = [
     "https://e-commerce-project-qmog.vercel.app",
-    "https://e-commerce-project-flax.vercel.app"
+    "https://e-commerce-project-flax.vercel.app",
+    "https://ecommerce-project-frontend-4e57.onrender.com"
+
 ];
 
 app.use(cors({
