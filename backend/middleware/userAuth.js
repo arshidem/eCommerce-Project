@@ -1,23 +1,40 @@
-const jwt =require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 
-const userAuth=async(req,res,next)=>{
-    const {token} =req.cookies
-    if(!token){
-        return res.json({success:false,message:"Login Again"})
+const userAuth = async (req, res, next) => {
+  const { token } = req.cookies;
+
+  // Check if the token is present in cookies
+  if (!token) {
+    return res.status(401).json({
+      success: false,
+      message: 'Login again. No token provided.'
+    });
+  }
+
+  try {
+    // Verify the token
+    const tokenDecoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+
+    if (tokenDecoded.id) {
+      // Attach user ID to the request object for use in subsequent middleware or route handlers
+      req.body.userId = tokenDecoded.id;
+      return next(); // Proceed to the next middleware or route handler
+    } else {
+      return res.status(401).json({
+        success: false,
+        message: 'Not authorized. Login again.'
+      });
     }
-    try {
-      const tokenDecode=  jwt.verify(token,process.env.JWT_SECRET_KEY)
+  } catch (error) {
+    // Log the error for debugging purposes
+    console.error('Token verification error:', error.message);
 
-      if(tokenDecode.id){
-        req.body.userId=tokenDecode.id
-       
-      }else{
-        return res.json({success:false,message:"Not Authorised. Login Again"})
-      }
+    // Send a generic message to the client without exposing error details
+    return res.status(403).json({
+      success: false,
+      message: 'Token is invalid or expired.'
+    });
+  }
+};
 
-      next();
-    } catch (error) {
-        res.json({success:false,message:error.message})
-    }
-}
-module.exports=userAuth
+module.exports = userAuth;
