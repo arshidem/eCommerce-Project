@@ -4,10 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "../../../context/AppContext";
 import { toast } from "react-toastify";
 import "../../../css/UserSignIn.css"; // Import external CSS
-import cosmetics from '../../../assets/images/sign/cosmetics.jpg'
-import toy from '../../../assets/images/sign/toy.jpg'
 import fashion from '../../../assets/images/sign/fashion.jpg'
-import electronics from '../../../assets/images/sign/electronics.jpg'
 
 const UserSignIn = () => {
     const navigate = useNavigate();

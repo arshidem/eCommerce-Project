@@ -5,10 +5,7 @@ import { AppContext } from "../../../context/AppContext";
 import { toast } from "react-toastify";
 import { z } from "zod";
 import "../../../css/UserRegister.css";
-import cosmetics from "../../../assets/images/sign/cosmetics.jpg";
-import toy from "../../../assets/images/sign/toy.jpg";
 import fashion from "../../../assets/images/sign/fashion.jpg";
-import electronics from "../../../assets/images/sign/electronics.jpg";
 
 const passwordSchema = z
   .string()
