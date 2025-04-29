@@ -30,6 +30,7 @@ const UserSignIn = () => {
                 setLoggedin(true);
                 setToken(data.token);
                 localStorage.setItem('userToken', data.token); // Ensure consistent key
+                axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
                 await getUserData();  // Wait for user data
                 navigate('/');  // Redirect after user data is loaded
             } else {
